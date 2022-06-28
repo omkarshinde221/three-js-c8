@@ -138,6 +138,9 @@ var url = new URL(queryString);
 var sender = url.searchParams.get("sender");
 var receiver = url.searchParams.get("receiver");
 var amount = url.searchParams.get("amount");
+var sender1 = url.searchParams.get("sender1");
+var receiver1 = url.searchParams.get("receiver1");
+var amount1 = url.searchParams.get("amount1");
 var creator = url.searchParams.get("creator");
 var time = url.searchParams.get("time");
 
@@ -159,17 +162,23 @@ context2.fillText("{ ", 6, 20);
 context2.fillText("Block Number:2 ", 13, 40);
 context2.fillText("Block created by : ", 13, 60);
 context2.fillText(creator, 113, 60);
-context2.fillText("Transactions:  { ", 13, 80);
+context2.fillText("Transactions: [ { ", 13, 80);
 context2.fillText("'sender:' ", 23, 100, );
 context2.fillText(sender, 73, 100);
 context2.fillText("'receiver:' ", 23, 120 );
 context2.fillText(receiver, 73, 120);
 context2.fillText("'amount:' ", 23, 140 );
 context2.fillText(amount, 73, 140);
-context2.fillText("} ", 43, 160);
-context2.fillText("'Timestamp:' ", 23, 180 );
-context2.fillText(time, 93, 180);
-context2.fillText("} ", 6, 206);
+context2.fillText("} {", 13, 160);
+context2.fillText("'sender:' ", 23, 180, );
+context2.fillText(sender1, 73, 180);
+context2.fillText("'receiver:' ", 23, 200 );
+context2.fillText(receiver1, 73, 200);
+context2.fillText("'amount:' ", 23, 220 );
+context2.fillText(amount1, 73, 220);
+context2.fillText("'Timestamp:' ", 23, 240 );
+context2.fillText(time, 93, 240);
+context2.fillText("} ] } ", 6, 250);
 
 let canvasTexture2 = new THREE.CanvasTexture( canvas2 );
 
