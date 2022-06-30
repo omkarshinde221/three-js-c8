@@ -143,6 +143,8 @@ var receiver1 = url.searchParams.get("receiver1");
 var amount1 = url.searchParams.get("amount1");
 var creator = url.searchParams.get("creator");
 var time = url.searchParams.get("time");
+var ttime1 = url.searchParams.get("ttime1");
+var ttime2 = url.searchParams.get("ttime2");
 
 // console.log("Value is:" + pair[1]);
 
@@ -152,33 +154,38 @@ var time = url.searchParams.get("time");
 //Cube3
 console.log("**")
 var canvas2 = document.createElement('canvas');
-canvas2.width = canvas2.height = 256;
+canvas2.width = canvas2.height = 384;
 var context2 = canvas2.getContext("2d");
 context2.fillStyle='white';
-context2.fillRect(3, 3, 256, 256);
+context2.fillRect(3, 3, 384, 384);
 context2.fillStyle='black';
-context2.font = "400 12px Arial";
+context2.font = "500 18px Arial";
 context2.fillText("{ ", 6, 20);
 context2.fillText("Block Number:2 ", 13, 40);
 context2.fillText("Block created by : ", 13, 60);
-context2.fillText(creator, 113, 60);
+context2.fillText(creator, 163, 60);
 context2.fillText("Transactions: [ { ", 13, 80);
-context2.fillText("'sender:' ", 23, 100, );
-context2.fillText(sender, 73, 100);
-context2.fillText("'receiver:' ", 23, 120 );
-context2.fillText(receiver, 73, 120);
-context2.fillText("'amount:' ", 23, 140 );
-context2.fillText(amount, 73, 140);
-context2.fillText("} {", 13, 160);
-context2.fillText("'sender:' ", 23, 180, );
-context2.fillText(sender1, 73, 180);
-context2.fillText("'receiver:' ", 23, 200 );
-context2.fillText(receiver1, 73, 200);
-context2.fillText("'amount:' ", 23, 220 );
-context2.fillText(amount1, 73, 220);
-context2.fillText("'Timestamp:' ", 23, 240 );
-context2.fillText(time, 93, 240);
-context2.fillText("} ] } ", 6, 250);
+context2.fillText("'sender:' ", 23, 110, );
+context2.fillText(sender, 103, 110);
+context2.fillText("'receiver:' ", 23, 130 );
+context2.fillText(receiver, 103, 130);
+context2.fillText("'amount:' ", 23, 150 );
+context2.fillText(amount, 103, 150);
+context2.fillText("'Timestamp:' ", 23, 180 );
+context2.fillText(ttime1, 133, 180);
+context2.fillText("} {", 13, 200);
+context2.fillText("'sender:' ", 23, 230, );
+context2.fillText(sender1, 103, 230);
+context2.fillText("'receiver:' ", 23, 250 );
+context2.fillText(receiver1, 103, 250);
+context2.fillText("'amount:' ", 23, 270 );
+context2.fillText(amount1, 103, 270);
+context2.fillText("'Timestamp:' ", 23, 290 );
+context2.fillText(ttime2, 133, 290);
+context2.fillText("} ", 6, 320);
+context2.fillText("'Timestamp:' ", 23, 340 );
+context2.fillText(time, 133, 340);
+context2.fillText("] } ", 6, 370);
 
 let canvasTexture2 = new THREE.CanvasTexture( canvas2 );
 
