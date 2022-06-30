@@ -14,10 +14,11 @@ renderer.setPixelRatio( window.devicePixelRatio);
 
 renderer.setSize( window.innerWidth, window.innerHeight);
 camera.position.setZ(90);
-
+scene.background = new THREE.Color('#1B2430');
 renderer.render(scene, camera)
 
 const geometry = new THREE.BoxGeometry( 40, 40, 40, 100 );
+
 
 const geometry1 = new THREE.BoxGeometry( 40, 40, 40, 100 );
 
@@ -48,7 +49,7 @@ var context = canvas.getContext("2d");
 context.fillStyle='white';
 context.fillRect(3, 3, 256, 256);
 context.fillStyle='black';
-context.font = "400 12px Arial";
+context.font = "450 14px muli extralight";
 context.fillText("{ ", 6, 20);
 context.fillText("Block Number:0 ", 13, 40);
 context.fillText("Block created by : nsndcn23782njhnjcdf", 13, 60);
@@ -93,7 +94,7 @@ var context1 = canvas1.getContext("2d");
 context1.fillStyle='white';
 context1.fillRect(3, 3, 256, 256);
 context1.fillStyle='black';
-context1.font = "400 12px Arial";
+context1.font =  "450 14px muli extralight";
 context1.fillText("{ ", 6, 20);
 context1.fillText("Block Number:1 ", 13, 40);
 context1.fillText("Block created by : nsndcn23782njhnjcdf", 13, 60);
@@ -145,6 +146,8 @@ var creator = url.searchParams.get("creator");
 var time = url.searchParams.get("time");
 var ttime1 = url.searchParams.get("ttime1");
 var ttime2 = url.searchParams.get("ttime2");
+var bsize = url.searchParams.get("bsize");
+var tsize = url.searchParams.get("tsize");
 
 // console.log("Value is:" + pair[1]);
 
@@ -159,33 +162,39 @@ var context2 = canvas2.getContext("2d");
 context2.fillStyle='white';
 context2.fillRect(3, 3, 384, 384);
 context2.fillStyle='black';
-context2.font = "500 18px Arial";
+context2.font =  "450 18px muli extralight";
 context2.fillText("{ ", 6, 20);
 context2.fillText("Block Number:2 ", 13, 40);
 context2.fillText("Block created by : ", 13, 60);
 context2.fillText(creator, 163, 60);
-context2.fillText("Transactions: [ { ", 13, 80);
-context2.fillText("'sender:' ", 23, 110, );
-context2.fillText(sender, 103, 110);
-context2.fillText("'receiver:' ", 23, 130 );
-context2.fillText(receiver, 103, 130);
-context2.fillText("'amount:' ", 23, 150 );
-context2.fillText(amount, 103, 150);
-context2.fillText("'Timestamp:' ", 23, 180 );
-context2.fillText(ttime1, 133, 180);
-context2.fillText("} {", 13, 200);
-context2.fillText("'sender:' ", 23, 230, );
+context2.fillText("Block size : ", 13, 80);
+context2.fillText(creator, 113, 80);
+context2.fillText("Total size : ", 13, 100);
+context2.fillText(creator, 113, 100);
+
+context2.fillText("Transactions: [ ", 13, 120);
+context2.fillText("{ 'sender:' ", 23, 140, );
+context2.fillText(sender, 103, 140);
+context2.fillText("'receiver:' ", 23, 160 );
+context2.fillText(receiver, 103, 160);
+context2.fillText("'amount:' ", 23, 180 );
+context2.fillText(amount, 103, 180);
+context2.fillText("'Timestamp:' ", 23, 200 );
+context2.fillText(ttime1+"  } ", 133, 200);
+// context2.fillText("} {", 323, 180);
+context2.fillText("{ 'sender:' ", 23, 230, );
 context2.fillText(sender1, 103, 230);
 context2.fillText("'receiver:' ", 23, 250 );
 context2.fillText(receiver1, 103, 250);
 context2.fillText("'amount:' ", 23, 270 );
 context2.fillText(amount1, 103, 270);
 context2.fillText("'Timestamp:' ", 23, 290 );
-context2.fillText(ttime2, 133, 290);
-context2.fillText("} ", 6, 320);
-context2.fillText("'Timestamp:' ", 23, 340 );
-context2.fillText(time, 133, 340);
-context2.fillText("] } ", 6, 370);
+context2.fillText(ttime2 + " } ", 133, 290);
+context2.fillText("} ", 6, 310);
+context2.fillText("'Timestamp:' ", 23, 330 );
+context2.fillText(time, 133, 330);
+context2.fillText("]  ", 76, 350);
+context2.fillText(" } ", 6, 370);
 
 let canvasTexture2 = new THREE.CanvasTexture( canvas2 );
 
