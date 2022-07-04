@@ -168,9 +168,9 @@ context2.fillText("Block Number:2 ", 13, 40);
 context2.fillText("Block created by : ", 13, 60);
 context2.fillText(creator, 163, 60);
 context2.fillText("Block size : ", 13, 80);
-context2.fillText(creator, 113, 80);
+context2.fillText(bsize, 113, 80);
 context2.fillText("Total size : ", 13, 100);
-context2.fillText(creator, 113, 100);
+context2.fillText(tsize, 113, 100);
 
 context2.fillText("Transactions: [ ", 13, 120);
 context2.fillText("{ 'sender:' ", 23, 140, );
